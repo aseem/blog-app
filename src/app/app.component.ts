@@ -7,5 +7,5 @@ import { Post } from "./post";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "blog-app";
+  title = "My Blog";
 }
