@@ -8,8 +8,15 @@ import { Post } from "../post";
 })
 export class PostCardComponent implements OnInit {
   @Input() post: Post;
+  likeCount: number;
 
-  constructor() {}
+  constructor() {
+    this.likeCount = 0;
+  }
 
   ngOnInit(): void {}
+
+  updateLikes() {
+    this.likeCount++;
+  }
 }
