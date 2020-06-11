@@ -8,11 +8,4 @@ import { Post } from "./post";
 })
 export class AppComponent {
   title = "blog-app";
-  posts: Post[] = [
-    new Post("My first angular app", "body of my first angular app."),
-    new Post(
-      "My first angular component",
-      "body of my first angular component."
-    ),
-  ];
 }
