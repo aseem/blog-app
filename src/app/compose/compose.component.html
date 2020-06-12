@@ -1,1 +1,8 @@
 <p>compose works!</p>
+<form #composeForm="ngForm" (ngSubmit)="handleSubmission()">
+  <input name="title" ngModel required />
+  <input name="body" ngModel required />
+  <button type="submit" [disabled]="!composeForm.valid">
+    Submit
+  </button>
+</form>
