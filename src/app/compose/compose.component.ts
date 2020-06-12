@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { Post } from "../post";
 import { PostService } from "../post.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-compose",
@@ -11,7 +12,7 @@ import { PostService } from "../post.service";
 export class ComposeComponent implements OnInit {
   @ViewChild("composeForm") composeForm: NgForm;
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -22,6 +23,6 @@ export class ComposeComponent implements OnInit {
       this.composeForm.value["body"]
     );
     this.postService.addPost(newPost);
-    this.composeForm.reset();
+    this.router.navigate(["/"]);
   }
 }
