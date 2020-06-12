@@ -10,6 +10,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatBadgeModule } from "@angular/material/badge";
 import { PostCardComponent } from "./post-card/post-card.component";
 import { LikeButtonComponent } from "./like-button/like-button.component";
+import { FuzzyDatePipe } from './fuzzy-date.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LikeButtonComponent } from "./like-button/like-button.component";
     PostListComponent,
     PostCardComponent,
     LikeButtonComponent,
+    FuzzyDatePipe,
   ],
   imports: [
     BrowserModule,
