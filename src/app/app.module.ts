@@ -11,6 +11,7 @@ import { MatBadgeModule } from "@angular/material/badge";
 import { PostCardComponent } from "./post-card/post-card.component";
 import { LikeButtonComponent } from "./like-button/like-button.component";
 import { FuzzyDatePipe } from './fuzzy-date.pipe';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FuzzyDatePipe } from './fuzzy-date.pipe';
     MatButtonModule,
     MatIconModule,
     MatBadgeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
