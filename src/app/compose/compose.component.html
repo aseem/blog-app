@@ -1,8 +1,20 @@
-<p>compose works!</p>
 <form #composeForm="ngForm" (ngSubmit)="handleSubmission()">
-  <input name="title" ngModel required />
-  <input name="body" ngModel required />
-  <button type="submit" [disabled]="!composeForm.valid">
+  <mat-form-field class="example-full-width">
+    <mat-label>Blog Title</mat-label>
+    <input matInput name="title" ngModel required />
+  </mat-form-field>
+  <br />
+  <mat-form-field class="example-full-width">
+    <mat-label>Blog Body</mat-label>
+    <textarea matInput name="body" ngModel required></textarea>
+  </mat-form-field>
+  <br />
+  <button
+    type="submit"
+    [disabled]="!composeForm.valid"
+    mat-raised-button
+    color="primary"
+  >
     Submit
   </button>
 </form>
