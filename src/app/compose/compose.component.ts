@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { Post } from "../post";
+import { PostService } from "../post.service";
 
 @Component({
   selector: "app-compose",
@@ -10,7 +11,7 @@ import { Post } from "../post";
 export class ComposeComponent implements OnInit {
   @ViewChild("composeForm") composeForm: NgForm;
 
-  constructor() {}
+  constructor(private postService: PostService) {}
 
   ngOnInit(): void {}
 
@@ -20,7 +21,7 @@ export class ComposeComponent implements OnInit {
       this.composeForm.value["title"],
       this.composeForm.value["body"]
     );
-
+    this.postService.addPost(newPost);
     this.composeForm.reset();
   }
 }
