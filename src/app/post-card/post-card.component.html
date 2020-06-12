@@ -1,8 +1,10 @@
 <mat-card>
   <mat-card-title>{{ post.title }}</mat-card-title>
   <mat-card-content>{{ post.body }}</mat-card-content>
-  <p>Likes: {{ likeCount }}</p>
   <mat-card-actions>
-    <app-like-button (newLike)="updateLikes()"></app-like-button>
+    <app-like-button
+      [numLikes]="post.likes"
+      (newLike)="updateLikes()"
+    ></app-like-button>
   </mat-card-actions>
 </mat-card>

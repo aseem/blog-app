@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
 
 @Component({
   selector: "app-like-button",
@@ -7,6 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 })
 export class LikeButtonComponent implements OnInit {
   @Output() newLike = new EventEmitter();
+  @Input() numLikes: number;
 
   constructor() {}
 
