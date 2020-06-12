@@ -12,6 +12,7 @@ import { PostCardComponent } from "./post-card/post-card.component";
 import { LikeButtonComponent } from "./like-button/like-button.component";
 import { FuzzyDatePipe } from './fuzzy-date.pipe';
 import { AppRoutingModule } from './app-routing.module';
+import { ComposeComponent } from './compose/compose.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     PostCardComponent,
     LikeButtonComponent,
     FuzzyDatePipe,
+    ComposeComponent,
   ],
   imports: [
     BrowserModule,
